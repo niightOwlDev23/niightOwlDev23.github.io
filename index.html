@@ -6,12 +6,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="planner.js"></script>
+    <script src="excel-bootstrap-table-filter-bundle.js"></script>
+    <link rel="stylesheet" href="excel-bootstrap-table-filter-style.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <nav>
         <div><img class="logo_img" src="logo.JPG" alt="logo image"></div>
+        <div>
+            <a href="./machineCapacity.html">Machine Capacity</a>
+        </div>
     </nav>
     <div class="content-area">
         <div class="section-header">
@@ -20,136 +25,160 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm">
+                <div class="col-3">
                     <div class="table-header">UnPlanned Orders</div>
-                    <table class="table table-bordered table-responsive">
+                    <table class="table table-bordered table-responsive unplanned-order">
                         <thead>
                             <tr>
-                                <th scope="col" class="order-number-cell"><input type="text" placeholder="Search"></th>
-                                <th scope="col"><input type="text" placeholder="Search"></th>
-                                <th scope="col" class="date-cell"><input type="text" placeholder="Search"></th>
+                                <th scope="col" class="order-cell">Number</th>
+                                <th scope="col">Name</th>
+                                <th scope="col" class="cust-ref-cell">Cust Ref No</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>87581</td>
-                                <td>Eoin Guiry</td>
-                                <td>Ireland</td>
+                                <td title="Eoin Guiry" class="column-name">Eoin Guiry</td>
+                                <td>34534</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>34323</td>
+                            </tr>
+                            <tr>
+                                <td>87563</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>34323</td>
+                            </tr>
+                            <tr>
+                                <td>87563</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>34323</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="col-sm ">
+                <div class="col-4">
                     <div class="table-header">Planned Orders</div>
-
-                    <table class="table table-bordered table-responsive">
+                    <table class="table table-bordered table-responsive planned-order">
                         <thead>
                             <tr>
 
-                                <th scope="col" class="order-number-cell"><input type="text" placeholder="Search"></th>
-                                <th scope="col"><input type="text" placeholder="Search"></th>
-                                <th scope="col" class="date-cell"><input type="text" placeholder="Search"></th>
-                                <th scope="col"><input type="text" placeholder="Search"></th>
+                                <th scope="col" class="order-number-cell">Number</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Value</th>
+                                <th scope="col" class="date-cell">Delivery Date</th>
+                                <th scope="col">Bay</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>87581</td>
-                                <td>Eoin Guiry</td>
+                                <td class="column-name">Eoin Guiry</td>
+                                <td>4333</td>
                                 <td>12/12/2021</td>
-                                <td>Ireland</td>
+                                <td>1</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>4333</td>
                                 <td>-</td>
-                                <td>Ireland</td>
+                                <td>2</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>4333</td>
                                 <td>-</td>
-                                <td>Ireland</td>
+                                <td>3</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>4333</td>
                                 <td>-</td>
-                                <td>Ireland</td>
+                                <td>4</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>4333</td>
                                 <td>-</td>
-                                <td>Ireland</td>
+                                <td>4</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>4333</td>
                                 <td>-</td>
-                                <td>Ireland</td>
+                                <td>4</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="col-sm">
+                <div class="col-5">
                     <div class="table-header">Held Orders</div>
-                    <table class="table table-bordered table-responsive">
+                    <table class="table table-bordered table-responsive held-orders">
                         <thead>
                             <tr>
-                                <th scope="col" class="order-number-cell"><input type="text" placeholder="Search"></th>
-                                <th scope="col"><input type="text" placeholder="Search"></th>
-                                <th scope="col" class="date-cell"><input type="text" placeholder="Search"></th>
-                                <th scope="col"><input type="text" placeholder="Search"></th>
+                                <th scope="col" class="order-cell">Order</th>
+                                <th scope="col">Name</th>
+                                <th scope="col" class="date-cell">Reason held</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col" class="stock-description">RM Stock description</th>
+                                <th scope="col" class="stock-code">Stock Code</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>87581</td>
-                                <td>Eoin Guiry</td>
-                                <td>Ireland</td>
-                                <td>In Progress</td>
+                                <td class="column-name">Eoin Guiry</td>
+                                <td>late order</td>
+                                <td>45343</td>
+                                <td>xyz</td>
+                                <td>323</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
-                                <td>Pending</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>no stock</td>
+                                <td>434343</td>
+                                <td>conductors</td>
+                                <td>232</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
-                                <td>Pending</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>weather</td>
+                                <td>5533</td>
+                                <td>machine parts</td>
+                                <td>111</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
-                                <td>Pending</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>weather</td>
+                                <td>5533</td>
+                                <td>machine parts</td>
+                                <td>111</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
-                                <td>Pending</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>weather</td>
+                                <td>5533</td>
+                                <td>machine parts</td>
+                                <td>111</td>
                             </tr>
                             <tr>
                                 <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
-                                <td>Pending</td>
-                            </tr>
-                            <tr>
-                                <td>87563</td>
-                                <td>Bridge Engineering service limited</td>
-                                <td>Ireland</td>
-                                <td>Pending</td>
+                                <td class="column-name" title="Bridge Engineering service limited">Bridge Engineering service limited</td>
+                                <td>weather</td>
+                                <td>5533</td>
+                                <td>machine parts</td>
+                                <td>111</td>
                             </tr>
                         </tbody>
                     </table>
@@ -159,53 +188,79 @@
 
         <div class="container planner-section">
             <div class="row">
-                <div class="col-8">
+                <div class="col-9">
                     <div class="section-header">
                         Planner
                     </div>
-                    <div class="planner-row">
-                        <label for="collection">Collection/Delivery</label>
-                        <select class="custom-select" id="collection">
-                            <option selected>Delivery</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <label for="bay" style="width: 3.7rem;">Bay</label>
-                        <input type="text" id="bay" class="bay-cell">
+                    <div class="planner-row mb-2">
+                        <span class="mr-2 order-no">#87563</span>
+                        <div class="order-details">
+                            <span>Bridge Engineering service limited</span>
+                            <div><textarea disabled>Cork Building Supplies,Enterprise Park,Clogheen.Clonakilty</textarea></div>
+                        </div>
+                        <span class="label">Sage Notes</span>
+                        <div class="order-details">
+                            <div>Reserved stock for specific customer</div>
+                            <div><textarea class="text-area" disabled>need to go to Jason O'sullivan yard in Ballyheigue</textarea></div>
+                        </div>
 
-                        <span class="order-details">Bridge Engineering service limited</span> #<span>87563</span>
+                        <!-- collection/delivery -->
+                        <!-- <span>One</span> -->
+
                     </div>
-                    <div class="planner-row">
-                        <label for="deliveryDate">Delivery Date</label>
+                    <div class="planner-row" style="margin-left: 4rem;">
+                        <label for="bay" style="width: 1.5rem;">Bay</label>
+                        <select class="mr-4">
+                            <option selected>select</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <label for="deliveryDate" class="delivery-date-label">Delivery Date</label>
                         <input type="date" id="deliveryDate" name="delivery-date" min="2021-10-05" max="2070-12-31">
                         <button type="button" class="btn btn-success button-primary">Calculate Make Date</button>
                     </div>
                     <div>
                         <table class="table table-bordered table-responsive">
                             <thead>
-                                <tr class="d-flex">
-                                    <th class="order-cell">Order No</th>
+                                <tr>
+                                    <th class="order-cell">Line No</th>
                                     <th class="dept-cell">Dept.</th>
                                     <th class="item-cell">Item</th>
-                                    <th class="qty-cell">Order Quantity</th>
-                                    <th class="qty-cell">Available Quantity</th>
+                                    <th class="qty-cell">Qty</th>
+                                    <th class="qty-cell">Stk Avlb</th>
                                     <th class="date-cell">Make Date</th>
                                     <th class="week-cell">Week</th>
                                     <th class="status-cell">Status</th>
                                     <th class="comments-cell">Comments</th>
+                                    <th class="comments-cell">Additional Comments</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="d-flex">
-                                    <td class="order-cell">87581</td>
-                                    <td class="dept-cell">N/A</td>
-                                    <td class="item-cell">Laser Cut IRF MS 5MM_6 OFF </td>
-                                    <td class="qty-cell">1</td>
-                                    <td class="qty-cell"> 0</td>
-                                    <td class="date-cell"><input type="date"></td>
+                                <tr>
+                                    <td>1</td>
+                                    <td>machinery</td>
+                                    <td title="Laser Cut IRF MS 5MM_6 OFF" class="column-name">Laser Cut IRF MS 5MM_6 OFF </td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td><input type="date"></td>
                                     <td class="week-cell"><input type="text"></td>
                                     <td class="status-cell"><select class="custom-select" id="collection"></select></td>
+                                    <td class="comments-cell"><textarea disabled>can take extra order</textarea></td>
+                                    <td class="comments-cell"><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td class="order-cell">2</td>
+                                    <td class="dept-cell">N/A</td>
+                                    <td class="item-cell column-name" title="Laser Cut IRF MS 5MM_6 OFF">Laser Cut IRF MS 5MM_6 OFF </td>
+                                    <td class="qty-cell">1</td>
+                                    <td class="qty-cell"> 0</td>
+                                    <td><input type="date"></td>
+                                    <td class="week-cell"><input type="text"></td>
+                                    <td class="status-cell"><select class="custom-select" id="collection"></select></td>
+                                    <td class="comments-cell"><textarea disabled>delayed for a day</textarea></td>
                                     <td class="comments-cell"><textarea></textarea></td>
                                 </tr>
                             </tbody>
@@ -215,7 +270,7 @@
                         <button class="btn btn-success button-primary">Submit</button>
                     </div>
                 </div>
-                <div class="col-4 forms-section">
+                <div class="col-3 forms-section">
                     <div class="section-header">
                         Forms
                     </div>
@@ -235,6 +290,10 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
