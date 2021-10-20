@@ -16,6 +16,7 @@
         <div><img class="logo_img" src="logo.JPG" alt="logo image"></div>
         <div>
             <a href="./machineCapacity.html">Machine Capacity</a>
+            <a href="./bayDelivery.html">Bay Delivery</a>
         </div>
     </nav>
     <div class="content-area">
@@ -192,36 +193,36 @@
                     <div class="section-header">
                         Planner
                     </div>
-                    <div class="planner-row mb-2">
+                    <div class="planner-row mb-2 row ml-1">
                         <span class="mr-2 order-no">#87563</span>
-                        <div class="order-details">
+                        <div class="order-details col">
                             <span>Bridge Engineering service limited</span>
                             <div><textarea disabled>Cork Building Supplies,Enterprise Park,Clogheen.Clonakilty</textarea></div>
                         </div>
                         <span class="label">Sage Notes</span>
-                        <div class="order-details">
-                            <div>Reserved stock for specific customer</div>
+                        <div class="order-details col">
                             <div><textarea class="text-area" disabled>need to go to Jason O'sullivan yard in Ballyheigue</textarea></div>
                         </div>
 
                         <!-- collection/delivery -->
                         <!-- <span>One</span> -->
+                        <div class="planner-row">
+                            <label for="bay" style="width: 1.5rem;">Bay</label>
+                            <select>
+                                <option selected>select</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <label for="deliveryDate" class="delivery-date-label">Delivery Date</label>
+                            <input type="date" id="deliveryDate" name="delivery-date" min="2021-10-05" max="2070-12-31">
+                            <button type="button" class="btn btn-success button-primary">Calculate Make Date</button>
+                            <div>Reserved stock for specific customer</div>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div class="planner-row" style="margin-left: 4rem;">
-                        <label for="bay" style="width: 1.5rem;">Bay</label>
-                        <select class="mr-4">
-                            <option selected>select</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                        <label for="deliveryDate" class="delivery-date-label">Delivery Date</label>
-                        <input type="date" id="deliveryDate" name="delivery-date" min="2021-10-05" max="2070-12-31">
-                        <button type="button" class="btn btn-success button-primary">Calculate Make Date</button>
-                    </div>
                     <div>
                         <table class="table table-bordered table-responsive">
                             <thead>
